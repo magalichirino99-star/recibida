@@ -200,9 +200,10 @@
             font-weight: 500;
         }
 
-        .audio-player audio {
+        .audio-player iframe {
             width: 100%;
-            outline: none;
+            border-radius: 10px;
+            border: none;
         }
 
         /* CARD */
@@ -501,11 +502,6 @@
     <div class="flower-decoration bottom-left">🌺</div>
     <div class="flower-decoration bottom-right">🌹</div>
 
-    <!-- AUDIO - CAN'T HOLD US -->
-    <audio autoplay loop id="bgAudio" style="display: none;">
-        <source src="https://raw.githubusercontent.com/magalichirino99-star/recibida/main/Can't%20Hold%20Us%20(feat.%20Ray%20Dalton)%20-%20Macklemore%20(320k).mp3" type="audio/mpeg">
-    </audio>
-
     <!-- HERO SECTION -->
     <section class="hero" id="inicio">
         <div class="hero-content">
@@ -530,10 +526,7 @@
             <!-- AUDIO PLAYER VISIBLE -->
             <div class="audio-player">
                 <p>🎵 La música de tu recibida:</p>
-                <audio controls>
-                    <source src="https://raw.githubusercontent.com/magalichirino99-star/recibida/main/Can't%20Hold%20Us%20(feat.%20Ray%20Dalton)%20-%20Macklemore%20(320k).mp3" type="audio/mpeg">
-                    Tu navegador no soporta el elemento de audio.
-                </audio>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2zYzyRzn8Urjz9aXNn0aZO?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -689,19 +682,6 @@
                 }
             });
         });
-
-        // AUDIO MANAGEMENT
-        const audio = document.getElementById('bgAudio');
-        if (audio) {
-            audio.volume = 0.2;
-            
-            // Intentar reproducir audio automáticamente
-            document.addEventListener('click', () => {
-                audio.play().catch(err => {
-                    console.log('Autoplay bloqueado por navegador');
-                });
-            }, { once: true });
-        }
     </script>
 </body>
 </html>
