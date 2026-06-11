@@ -184,6 +184,27 @@
             background: var(--rosa-viejo);
         }
 
+        /* AUDIO PLAYER */
+        .audio-player {
+            background: linear-gradient(135deg, var(--rosa), var(--rosa-oscuro));
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(217, 140, 168, 0.3);
+        }
+
+        .audio-player p {
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .audio-player audio {
+            width: 100%;
+            outline: none;
+        }
+
         /* CARD */
         .card {
             background: white;
@@ -482,7 +503,7 @@
 
     <!-- AUDIO - CAN'T HOLD US -->
     <audio autoplay loop id="bgAudio" style="display: none;">
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <source src="Can't%20Hold%20Us%20(feat.%20Ray%20Dalton)%20-%20Macklemore%20(320k).mp3" type="audio/mpeg">
     </audio>
 
     <!-- HERO SECTION -->
@@ -505,6 +526,15 @@
             <p>Después de años de esfuerzo, noches de estudio y mucha dedicación, llegó el momento de cosechar los frutos.</p>
             <p>Gracias por ser parte de mi camino.</p>
             <p>Espero que puedas acompañarme en este momento tan especial y celebrar conmigo este gran logro.</p>
+            
+            <!-- AUDIO PLAYER VISIBLE -->
+            <div class="audio-player">
+                <p>🎵 La música de tu recibida:</p>
+                <audio controls>
+                    <source src="Can't%20Hold%20Us%20(feat.%20Ray%20Dalton)%20-%20Macklemore%20(320k).mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
         </div>
     </section>
 
